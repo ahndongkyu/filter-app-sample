@@ -119,3 +119,14 @@ const closeLightBox = () => {
 [closeBtn, overlay].forEach((element) =>
   element.addEventListener('click', closeLightBox)
 );
+
+const filterMenuBtn = document.querySelector('.filter-btn-menu');
+console.log(filterMenuBtn);
+filterMenuBtn.addEventListener('click', function () {
+  this.classList.toggle('on');
+  if (this.classList.contains('on')) {
+    btnsWrapper.style.height = '31px';
+  } else {
+    btnsWrapper.style.height = '232px';
+  }
+});
